@@ -26,8 +26,21 @@
             <button>Add Task</button>
             <button>Delete List</button>
         </main>
-        <div class="hover">
+        <div class="hover" onclick=addlist()>
             +
         </div>
+        <div id="demo">
+
+        </div>
     </body>
+    <script>
+        function addlist(){
+            const x=document.getElementsByClassName("main");
+            for(let i=0;i>=0;i++)
+                {
+                    document.getElementById("demo").innerHTML=x[i].innerHTML;
+                }
+
+        }
+    </script>
 </html>
