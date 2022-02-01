@@ -1,0 +1,40 @@
+
+
+
+#body{
+    background-image: url("BG.jpg")  ;
+}
+#demo{
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    
+}
+
+.list{
+    margin-top: 95px;
+    border-radius: 10px;
+    
+    background: rgb(177,34,195);
+background: linear-gradient(0deg, rgba(177,34,195,1) 0%, rgba(158,36,204,1) 16%, rgba(253,55,45,1) 76%);
+    font-family: 'Saira Condensed', sans-serif;
+    color:rgb(201, 181, 238) ;
+    
+}
+.heading{
+    text-decoration: underline;
+    font-family: 'Supermercado One', cursive;
+    color:rgb(85, 42, 165) ;
+    margin-left: 40px;
+    margin-top: 90px;
+    margin-right: 10px;
+}
+
+#appname{
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    width: auto;
+    margin-left: 37em;
+    color: rgba(224, 11, 93, 0.952);
+    
+}

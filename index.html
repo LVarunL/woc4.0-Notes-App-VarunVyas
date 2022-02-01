@@ -1,35 +1,67 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>CheckPoint 1</title>
+        <title>CheckPoint 2</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Saira+Condensed:wght@900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="main.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Saira+Condensed:wght@900&family=Supermercado+One&display=swap" rel="stylesheet">
     </head>
-    <body class="body">
-        <header class="listname">
-            <div class="appname">
+    <body id="body">
+        <header>
+            <div id="appname">
                 <h1>Notes App</h1>
             </div>
             <br/>
         </header>
-        <main class="main">
+        <!--<main class="list">
             <h1>Task List</h1>
             <ul>
-                <li>Task 1 <img src="edit.png" width=20px> <img src="delete.jfif" width=20px> </li>
-                <li>Task 2 <img src="edit.png" width=20px> <img src="delete.jfif" width=20px> </li>
-                <li>Task 3 <img src="edit.png" width=20px> <img src="delete.jfif" width=20px> </li>
+                <li>Task 1 </li>
+                <li>Task 2 </li>
+                <li>Task 3 </li>
             </ul>
             <button>Add Task</button>
-            <button>Delete List</button>
+            <button>Delete List</button>-->
+        
         </main>
-        <div class="hover">
-            +
+        <div id="demo">
+
+        </div>
+        
+        
+        <div id="addlist">
+            <button id="lemon">+</button>
+            
         </div>
     </body>
+    </html>
+    <script>
+        document.getElementById("addlist").addEventListener("click",Addlist);
+        function Addlist(){
+            var nh1=document.createElement("h1");
+            nh1.classList.add("heading");
+            var nhead = document.createTextNode("New List");
+            nh1.appendChild(nhead);
+            document.getElementById("demo").appendChild(nh1);
 
-</html>
+            const tasks = ["Task new","Another One","last Ohkay"];
+            var m="<ul class='list'>";
 
+            
+            for(let i=0;i<tasks.length;i++)
+            {
+                m+="<li>"+tasks[i]+"</li>";
+            }
+            m+="</ul>";
+
+            document.getElementById("demo").innerHTML+= m;
+        }  
+    </script>
