@@ -48,20 +48,40 @@
         function Addlist(){
             var nh1=document.createElement("h1");
             nh1.classList.add("heading");
-            var nhead = document.createTextNode("New List");
+            let x = prompt("List Name");
+            var nhead = document.createTextNode(x);
             nh1.appendChild(nhead);
             document.getElementById("demo").appendChild(nh1);
 
-            const tasks = ["Task new","Another One","last Ohkay"];
-            var m="<ul class='list'>";
+            var tasks = [];
+            Addtask();
+
+            function Addtask(){
+                for(var i=0;true; i++) {
+                    if(tasks[i-1]=="") break;
+                    tasks[i] = prompt('Enter Element ' + (i+1) + '(Leave empty to stop)');
+                }
+                Makelist();
+            }
+            
+            function Makelist(){
+            var m ="<ul class='list'>";
 
             
-            for(let i=0;i<tasks.length;i++)
+            for(let i=0;i<tasks.length-1;i++)
             {
                 m+="<li>"+tasks[i]+"</li>";
             }
             m+="</ul>";
-
+            //m+="<button id='addtask'>Add Task</button>"
+        
             document.getElementById("demo").innerHTML+= m;
-        }  
+            }
+            //document.getElementById("addtask").addEventListener("click",AddMore);
+
+            
+        
+            
+        }
+        
     </script>
